@@ -82,16 +82,18 @@ const pessoas = [
     {nome: 'João Grilo', idade: 34, renda: 2.20},
 ]
 console.log('----------LISTA POR FOR IN')
-for(let indiceObjPessoa in pessoas){
-    console.log([indiceObjPessoa].nome, pessoas [indiceobjPessoa].idade, pessoas[indiceObjPessoa].renda)
+for (let indiceObjPessoa in pessoas) {
+    console.log(pessoas[indiceObjPessoa].nome, pessoas[indiceObjPessoa].idade, pessoas[indiceObjPessoa].renda)
 }
-consol.log('-----------LISTA POR FOR OF---------')
+console.log('-----------LISTA POR FOR OF---------')
 for(let pessoa of pessoas){
-    console.log(pessoa.nome, pesssoa.idade, pessoa.renda)
+    console.log(pessoa.nome, pessoa.idade, pessoa.renda)
 }
 
 //FOREACH
 const divForeach = document.querySelector('#div-foreach')
 
-
-
+pessoas.forEach((elem, i) => {
+    divForeach.innerHTML += `${i} - ${elem.nome}, ${elem.idade} anos com renda R$ 
+    ${elem.renda.toFixed(2).replace('.', ',')}   <br> `
+})
