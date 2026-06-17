@@ -95,5 +95,5 @@ const divForeach = document.querySelector('#div-foreach')
 
 pessoas.forEach((elem, i) => {
     divForeach.innerHTML += `${i} - ${elem.nome}, ${elem.idade} anos com renda R$ 
-    ${elem.renda.toFixed(2).replace('.', ',')}   <br> `
+    ${elem.renda.toFixed(2).replace('.', ',')} <br> `
 })
